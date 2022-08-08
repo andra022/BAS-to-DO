@@ -4,9 +4,9 @@
     box-sizing: border-box;
   }
   body {
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-    color: white;
-    font-family: "Poppins", sans-serif;
+    background-image: url("../images/fundal.jpg");
+    background-color: #cccccc;
+    font-family: "", fantasy;
     min-height: 100vh;
   }
   header {
@@ -22,20 +22,20 @@
   }
   form input,
   form button {
-    padding: 0.5rem;
-    font-size: 2rem;
-    border: none;
-    background: white;
+    padding: 0.3rem;
+    font-size: 1rem;
+    border: outset;
+    background: rgba(255, 255, 255, 0.747);
   }
   form button {
-    color: #ff6f47;
-    background: #f7fffe;
+    color: #64c186;
+    background: rgb(255, 255, 255);
     cursor: pointer;
     transition: all 0.3s ease;
   }
   form button:hover {
-    background: #ff6f47;
-    color: white;
+    background: #64c186;
+    color: rgba(255, 255, 255, 0.805);
   }
   .todo-container {
     display: flex;
@@ -50,9 +50,9 @@
   
   .todo {
     margin: 0.5rem;
-    background: white;
-    font-size: 1.5rem;
-    color: black;
+    background: rgba(255, 255, 255, 0.747);
+    font-size: 1rem;
+    color: #64c186;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,15 +67,16 @@
   
   .trash-btn,
   .complete-btn {
-    background: #ff6f47;
-    color: white;
-    border: none;
+    background: #64c186;
+    color: rgba(255, 255, 255, 0.747);
+    border: outset;
     padding: 1rem;
     cursor: pointer;
     font-size: 1rem;
+    font-family: "", fantasy;
   }
   .complete-btn {
-    background: rgb(11, 212, 162);
+    background: #64c186;
   }
   .todo-item {
     padding: 0rem 0.5rem;
@@ -104,7 +105,7 @@
     appearance: none;
     outline: 0;
     box-shadow: none;
-    border: 0 !important;
+    border: outset !important;
     background-image: none;
   }
   
@@ -115,10 +116,12 @@
     overflow: hidden;
   }
   select {
-    color: #ff6f47;
-    font-family: "Poppins", sans-serif;
+    background-color: rgba(255, 255, 255, 0.747);
+    color: #000000;
+    font-family: "", fantasy;
     cursor: pointer;
     width: 12rem;
+    border: outset;
   }
   /* Arrow */
   .select::after {
@@ -127,7 +130,7 @@
     top: 0;
     right: 0;
     padding: 1rem;
-    background: #ff6f47;
+    background: #64c186;
     cursor: pointer;
     pointer-events: none;
   }
