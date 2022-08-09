@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 
 const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
      const inputTextHandler = (e) => {

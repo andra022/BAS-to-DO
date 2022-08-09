@@ -1,5 +1,5 @@
-import * as React from "react"
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
+// import {useState, useEffect} from 'react'
 import "./App.css"
 import Form from "../components/Form"
 import TodoList from "../components/TodoList"
