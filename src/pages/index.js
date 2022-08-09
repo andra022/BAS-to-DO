@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 // import {useState, useEffect} from 'react'
 import "./App.css"
-import Form from "../components/Form"
-import TodoList from "../components/TodoList"
+import Form from "../components/action-form"
+import TodoList from "../components/to-do-list"
 
 const HomePage = () => {
     const [inputText, setInputText] = useState("");
