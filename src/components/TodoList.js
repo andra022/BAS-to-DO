@@ -6,13 +6,13 @@ const TodoList = ( {todos, setTodos, filteredTodos} ) => {
     return(
         <div className="container">
             <ul className="todo-list">
-                { filteredTodos.map ( (todo) => (
+                { filteredTodos.map ( (todo1) => (
                     <Todo 
                         setTodos={setTodos} 
                         todos={todos} 
-                        key={todo.id} 
-                        todo={todo} 
-                        text={todo.text} 
+                        key={todo1.id} 
+                        todo1={todo1} 
+                        text={todo1.text} 
                     />
                 ))
                 }

@@ -1,14 +1,14 @@
 import * as React from "react"
 
-const Todo = ({ text, setTodos, todos, todo }) => {
-    
+const Todo = ({ text, setTodos, todos, todo1 }) => {
+
     const deleteHandler = () => {
-        setTodos(todos.filter((el) => el.id !== todo.id));
+        setTodos(todos.filter((el) => el.id !== todo1.id));
     }
 
     const completeHandler = () => {
         setTodos(todos.map((item)=> {
-            if(item.id === todo.id){
+            if(item.id === todo1.id){
                 return{
                     ...item, completed: !item.completed
                 }
@@ -19,7 +19,7 @@ const Todo = ({ text, setTodos, todos, todo }) => {
 
     return(
         <div className="todo">
-            <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{text}</li>
+            <li className={`todo-item ${todo1.completed ? "completed" : ""}`}>{text}</li>
             <button onClick={completeHandler} className="complete-btn">
                 <i className="fas fa-check"></i>
             </button>

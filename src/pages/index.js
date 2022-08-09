@@ -13,10 +13,10 @@ const HomePage = () => {
     const filterHandler = () => {
         switch(status){
             case 'completed':
-                setFilteredTodos(todos.filter(todo => todo.completed === true))
+                setFilteredTodos(todos.filter(todo1 => todo1.completed === true))
                 break;
             case 'uncompleted':
-                setFilteredTodos(todos.filter(todo => todo.completed === false))
+                setFilteredTodos(todos.filter(todo1 => todo1.completed === false))
                 break;
             default: 
                 setFilteredTodos(todos);
