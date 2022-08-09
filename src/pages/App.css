@@ -23,7 +23,7 @@
   form input,
   form button {
     padding: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border: outset;
     background: rgba(255, 255, 255, 0.747);
   }
@@ -32,6 +32,7 @@
     background: rgb(255, 255, 255);
     cursor: pointer;
     transition: all 0.3s ease;
+    padding: 0.25rem;
     /* font-size: 0.5rem; */
   }
   form button:hover {
@@ -94,7 +95,7 @@
   }
   
   .completed {
-    text-decoration: line-through;
+    text-decoration: line-through wavy #d60b0b;
     opacity: 0.5;
   }
   

@@ -32,7 +32,7 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
                 className="todo-button" 
                 type="submit"
             >
-                <i className="fas fa-plus-square"></i>
+                <i className="fas fa-plus-square">⬇</i>
             </button>
 
             <div className="select">
@@ -43,7 +43,7 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
                 >
                     <option value="all">All</option>
                     <option value="completed">Done</option>
-                    <option value="uncompleted">Pending</option>
+                    <option value="uncompleted">Pending ... </option>
                 </select>
             </div>
         </form>
