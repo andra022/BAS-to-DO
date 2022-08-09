@@ -24,6 +24,7 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
                 onChange={inputTextHandler} 
                 type="text" 
                 className="Todo-input" 
+                placeholder="Insert your task here ... "
             />
 
             <button 
