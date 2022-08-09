@@ -2,7 +2,6 @@ import React from 'react'
 import Todo from "./Todo"
 
 const TodoList = ( {todos, setTodos, filteredTodos} ) => {
-    // const {FilteredTodos} = props; 
     return(
         <div className="container">
             <ul className="todo-list">
