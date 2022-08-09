@@ -22,8 +22,8 @@
   }
   form input,
   form button {
-    padding: 0.3rem;
-    font-size: 1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
     border: outset;
     background: rgba(255, 255, 255, 0.747);
   }
@@ -32,6 +32,7 @@
     background: rgb(255, 255, 255);
     cursor: pointer;
     transition: all 0.3s ease;
+    /* font-size: 0.5rem; */
   }
   form button:hover {
     background: #64c186;
@@ -59,7 +60,7 @@
     transition: all 1s ease;
   }
   .filter-todo {
-    padding: 1rem;
+    padding: 0.5rem;
   }
   .todo li {
     flex: 1;
