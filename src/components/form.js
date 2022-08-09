@@ -1,30 +1,48 @@
 import * as React from "react"
 
-const Form = ({SetInputText, todos, SetTodo, InputText}) => {
-     const InputTextHandler = (e) => {
-        console.log(e.target.value);
-        SetInputText(e.target.value);
+const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
+     const inputTextHandler = (e) => {
+        setInputText(e.target.value);
     }
 
-    const SubmitTodoHandler = (e) => {
+    const submitTodoHandler = (e) => {
         e.preventDefault();
-        SetTodo([
-            ...todos, { text: InputText, completed: false, id: Math.random() * 100 } 
+        setTodos([
+            ...todos, { text: inputText, completed: false, id: Math.random() * 1000 } 
         ])
-        SetInputText("");
+        setInputText("");
+    }
+
+    const statusHandler = (e) => {
+        setStatus(e.target.value);
     }
 
     return(
         <form>
-            <input value={InputText} onChange={InputTextHandler} type="text" className="Todo-input" />
-            <button onClick={SubmitTodoHandler} className="Todo-button" type="submit">
-                <i className="square"></i>
+            <input 
+                value={inputText} 
+                onChange={inputTextHandler} 
+                type="text" 
+                className="Todo-input" 
+            />
+
+            <button 
+                onClick={submitTodoHandler} 
+                className="todo-button" 
+                type="submit"
+            >
+                <i className="fas fa-plus-square"></i>
             </button>
+
             <div className="select">
-                <select name="Todos" className="sort-Todo">
+                <select 
+                    onChange={statusHandler} 
+                    name="todos" 
+                    className="filter-todo"
+                >
                     <option value="all">All</option>
-                    <option value="done">Done</option>
-                    <option value="pending">Pending</option>
+                    <option value="completed">Done</option>
+                    <option value="uncompleted">Pending</option>
                 </select>
             </div>
         </form>
