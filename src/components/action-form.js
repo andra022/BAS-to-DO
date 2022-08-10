@@ -19,36 +19,39 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
 
     return(
         <form>
-            <input 
-                value={inputText} 
-                onChange={inputTextHandler} 
-                type="text" 
-                className="Todo-input" 
-                placeholder="Insert your task here ... "
-            />
+            <article>
+                
+                    <input 
+                        value={inputText} 
+                        onChange={inputTextHandler} 
+                        type="text" 
+                        className="Todo-input" 
+                        placeholder="Insert your task here ... "
+                    />
 
-            <button 
-                onClick={submitTodoHandler} 
-                className="todo-button" 
-                type="submit"
-            >
-                <i className="fas fa-plus-square">⬇</i>
-            </button>
-            
-            <br />
-            <br />
+                    <button 
+                        onClick={submitTodoHandler} 
+                        className="todo-button" 
+                        type="submit"
+                    >
+                        <i className="fas fa-plus-square">⬇</i>
+                    </button>
+                 
 
-            <div className="select">
-                <select 
-                    onChange={statusHandler} 
-                    name="todos" 
-                    className="filter-todo"
-                >
-                    <option value="all">All</option>
-                    <option value="completed">Done</option>
-                    <option value="uncompleted">Pending ... </option>
-                </select>
-            </div>
+                
+                    <div className="select">
+                        <select 
+                            onChange={statusHandler} 
+                            name="todos" 
+                            className="filter-todo"
+                        >
+                            <option value="all">All</option>
+                            <option value="completed">Done</option>
+                            <option value="uncompleted">Pending ... </option>
+                        </select>
+                    </div>
+                 
+            </article>
         </form>
     )
 }
