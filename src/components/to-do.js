@@ -31,5 +31,3 @@ const Todo = ({ text, setTodos, todos, todo1 }) => {
 }
 
 export default Todo;
-
-// dfjdhkd

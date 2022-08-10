@@ -5,6 +5,11 @@
     overflow-y: auto;
     position: relative;
   }
+  @media screen and (max-width: 540px) {
+    .view {
+        width: 400px;
+    }
+  } 
   body {
     background-image: url("../images/fundal.jpg");
     background-color: #cccccc;
@@ -29,13 +34,16 @@
     border: outset;
     background: rgba(255, 255, 255, 0.747);
   }
+  form input:hover{
+    background: #64c186;
+    color: #e3e8e5;
+  }
   form button {
     color: #64c186;
     background: rgb(255, 255, 255);
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 0.25rem;
-    /* font-size: 0.5rem; */
   }
   form button:hover {
     background: #64c186;
@@ -68,7 +76,10 @@
   .todo li {
     flex: 1;
   }
-  
+  .todo:hover{
+    background: #64c186;
+    color: rgba(255, 255, 255, 0.805);
+  }
   .trash-btn,
   .complete-btn {
     background: #64c186;
@@ -79,23 +90,49 @@
     font-size: 1rem;
     font-family: "", fantasy;
   }
-  .complete-btn {
-    background: #64c186;
+  .complete-btn :hover{
+    background: #e3e8e5;
+    color: #64c186;
   }
+  /* .complete-btn :hover::after{
+    transform: scale(1.5);
+  } */
+  .trash-btn:hover{
+    background: #e3e8e5;
+    color: #64c186;
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .trash-btn:hover::after{
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+
+    animation: fadein 2s;
+  }
+
   .todo-item {
     padding: 0rem 0.5rem;
   }
   
-  .fa-trash,
-  .fa-check {
+  .fas-fa-trash,
+  .fas-fa-check {
     pointer-events: none;
   }
-  
+
   .fall {
     transform: translateY(10rem) rotateZ(20deg);
     opacity: 0;
   }
-  
+
   .completed {
     text-decoration: line-through wavy #d60b0b;
     opacity: 0.5;
@@ -127,6 +164,12 @@
     width: 12rem;
     border: outset;
   }
+
+  select:hover{
+    background: rgba(255, 255, 255, 0.805);
+    color: #64c186;
+  }
+
   /* Arrow */
   .select::after {
     content: "\25BC";
@@ -138,14 +181,12 @@
     cursor: pointer;
     pointer-events: none;
   }
-  @media screen and (max-width: 540px) {
-    .view {
-        width: 400px;
-    }
-}
-  /* Transition */
-  /*
+
   .select:hover::after {
     transform: scale(1.5);
   }
-  */
+
+  
+
+ 
+
