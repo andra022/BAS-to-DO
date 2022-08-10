@@ -6,6 +6,22 @@
     position: relative;
   }
 
+  @media screen and (min-width: 100px) and (max-width: 320px)
+  {
+      .body
+      {
+          width: 25px;
+      }
+  }
+
+  @media screen and (min-width: 100px) and (max-width: 320px)
+  {
+      .header
+      {
+          width: 25px;
+      }
+  }
+
   body {
     background-image: url("../images/fundal.jpg");
     background-color: #cccccc;
@@ -35,15 +51,21 @@
     color: #e3e8e5;
   }
   form button {
-    color: #64c186;
-    background: rgb(255, 255, 255);
+    background: #64c186;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 0.25rem;
+    /* content: "\25BC";
+    top: 0;
+    right: 0;
+    padding: 0rem;
+    background: #64c186;
+    cursor: pointer;
+    display: block; */
   }
   form button:hover {
-    background: #64c186;
-    color: rgba(255, 255, 255, 0.805);
+    background: #000000;
   }
   .todo-container {
     display: flex;
@@ -79,7 +101,6 @@
   .todo.trash-btn::after{
     animation: fadeout 3s;
   }
-  .trash-btn,
   .complete-btn {
     background: #64c186;
     color: rgba(255, 255, 255, 0.747);
@@ -89,6 +110,17 @@
     font-size: 1rem;
     font-family: "", fantasy;
   }
+
+  .trash-btn{
+    background: #64c186;
+    color: rgba(255, 255, 255, 0.747);
+    border: outset;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "", fantasy;
+  }
+  
   .complete-btn :hover{
     background: #e3e8e5;
     color: #64c186;
@@ -97,12 +129,30 @@
     background: #e3e8e5;
     color: #64c186;
   }
+
+  @-webkit-keyframes fadeOut {
+    0% { opacity: 1;}
+    99% { opacity: 0.01;}
+    100% { opacity: 0;width: 0; height: 0;}
+  }  
+  @keyframes fadeOut {
+    0% { opacity: 1;}
+    99% { opacity: 0.01;}
+    100% { opacity: 0;width: 0; height: 0;}
+  }
+
+  /* .trash-btn.fade-out {
+    -webkit-animation: fadeOut 10s;
+    animation: fadeOut 10s;
+    animation-fill-mode: forwards;
+  }  */
+
   .todo-item {
     padding: 0rem 0.5rem;
   }
-  
-  .fas-fa-trash,
-  .fas-fa-check {
+
+  .trash,
+  .check {
     pointer-events: none;
   }
 
@@ -143,14 +193,6 @@
     border: outset;
   }
   
-  @media screen and (min-width: 100px) and (max-width: 320px)
-{
-    .select
-    {
-        width: 25px;
-    }
-}
-
 
   select:hover{
     background: rgba(255, 255, 255, 0.805);
@@ -170,7 +212,8 @@
   }
 
   .select:hover::after {
-    transform: scale(1.5);
+    background: #64c186;
+    color: rgba(255, 255, 255, 0.747);
   }
 
   
