@@ -5,11 +5,7 @@
     overflow-y: auto;
     position: relative;
   }
-  @media screen and (max-width: 540px) {
-    .view {
-        width: 400px;
-    }
-  } 
+
   body {
     background-image: url("../images/fundal.jpg");
     background-color: #cccccc;
@@ -80,6 +76,9 @@
     background: #64c186;
     color: rgba(255, 255, 255, 0.805);
   }
+  .todo.trash-btn::after{
+    animation: fadeout 3s;
+  }
   .trash-btn,
   .complete-btn {
     background: #64c186;
@@ -94,31 +93,10 @@
     background: #e3e8e5;
     color: #64c186;
   }
-  /* .complete-btn :hover::after{
-    transform: scale(1.5);
-  } */
   .trash-btn:hover{
     background: #e3e8e5;
     color: #64c186;
   }
-
-  @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-  @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  .trash-btn:hover::after{
-    margin-top: 25px;
-    font-size: 21px;
-    text-align: center;
-
-    animation: fadein 2s;
-  }
-
   .todo-item {
     padding: 0rem 0.5rem;
   }
@@ -164,6 +142,15 @@
     width: 12rem;
     border: outset;
   }
+  
+  @media screen and (min-width: 100px) and (max-width: 199px)
+{
+    .select
+    {
+        width: 25px;
+    }
+}
+
 
   select:hover{
     background: rgba(255, 255, 255, 0.805);
