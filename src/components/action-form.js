@@ -34,6 +34,9 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
             >
                 <i className="fas fa-plus-square">⬇</i>
             </button>
+            
+            <br />
+            <br />
 
             <div className="select">
                 <select 
