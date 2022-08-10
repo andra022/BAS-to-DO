@@ -19,8 +19,6 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
 
     return(
         <form>
-            <article>
-                
                     <input 
                         value={inputText} 
                         onChange={inputTextHandler} 
@@ -50,8 +48,6 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
                             <option value="uncompleted">Pending ... </option>
                         </select>
                     </div>
-                 
-            </article>
         </form>
     )
 }

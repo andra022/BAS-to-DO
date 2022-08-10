@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-y: auto;
+    position: relative;
   }
   body {
     background-image: url("../images/fundal.jpg");
@@ -136,6 +138,11 @@
     cursor: pointer;
     pointer-events: none;
   }
+  @media screen and (max-width: 540px) {
+    .view {
+        width: 400px;
+    }
+}
   /* Transition */
   /*
   .select:hover::after {
