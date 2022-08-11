@@ -12,6 +12,7 @@ const TodoList = ( {todos, setTodos, filteredTodos} ) => {
                         key={todo1.id} 
                         todo1={todo1} 
                         text={todo1.text} 
+                        id={todo1.id} 
                     />
                 ))
                 }
