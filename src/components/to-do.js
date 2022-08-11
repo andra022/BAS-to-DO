@@ -4,10 +4,13 @@ const Todo = ({ text, setTodos, todos, todo1, id }) => {
 
     console.log("id: ",id);
     const deleteHandler = (e) => {
-        setTodos(
-            todos.filter((el) => el.id !== todo1.id)
-        );
-        console.log("parent node: ",e.target.parentNode.id);
+        setTimeout(function(){
+            setTodos(
+                todos.filter((el) => el.id !== todo1.id)
+            ); 
+       }, 4000);
+        const a = document.getElementById(e.target.parentNode.id);
+        a.classList.add('fade-out');
     }
 
     const completeHandler = () => {

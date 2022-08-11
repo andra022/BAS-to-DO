@@ -142,8 +142,8 @@
   }
 
   .todo.fade-out{
-    -webkit-animation: fadeOut 10s;
-    animation: fadeOut 10s;
+    -webkit-animation: fadeOut 4s;
+    animation: fadeOut 4s;
     animation-fill-mode: forwards;
   } 
 
