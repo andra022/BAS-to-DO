@@ -1,9 +1,13 @@
 import React from "react"
 
-const Todo = ({ text, setTodos, todos, todo1 }) => {
+const Todo = ({ text, setTodos, todos, todo1, id }) => {
 
-    const deleteHandler = () => {
-        setTodos(todos.filter((el) => el.id !== todo1.id));
+    console.log("id: ",id);
+    const deleteHandler = (e) => {
+        setTodos(
+            todos.filter((el) => el.id !== todo1.id)
+        );
+        console.log("parent node: ",e.target.parentNode.id);
     }
 
     const completeHandler = () => {
@@ -18,17 +22,18 @@ const Todo = ({ text, setTodos, todos, todo1 }) => {
     }
 
     return(
-        <div className="todo">
+        <div className="todo" id={'todo' + id }>
             
             <li className={`todo-item ${todo1.completed ? "completed" : ""} `}>{text}</li>
             <button onClick={completeHandler} className="complete-btn">
                 <i className="check">✔</i>
             </button>
             
-            <button onClick={deleteHandler} className="trash-btn">
-                <i className="trash">🗑</i>
-            </button>
             
+            <button onClick={deleteHandler} className="trash-btn">
+                 <i className="trash">🗑</i>
+            </button>
+
         </div>
     )
 }
